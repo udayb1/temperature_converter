@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Temperature Celsius</title>
+<link rel="stylesheet" href="c1.css">
+</head>
+<body>
+<center>
+<h1>Temperature converter</h1>
+
+<form>
+
+<input type="number" step="any" placeholder="temp in cel" id="cel"/><br/>
+
+<br/><input typr="number" step="any" placeholder="temp in fare" id="faren"/><script>
+let cel=document.getElementById("cel");
+
+let faren=document.getElementById("faren");
+
+cel.addEventListener("input",function(){
+
+
+let c=parseFloat(cel.value);
+let f=(c*9/5)+32;
+faren.value=f;
+});
+
+faren.addEventListner("input",function(){
+let f=parseFloat(faren.value);
+let c=(f-32)*5/9;
+cel.value=c;
+});
+
+</script>
+</form></center></body></html>
